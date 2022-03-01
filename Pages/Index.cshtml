@@ -1,0 +1,34 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<form method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label asp-for="AddUser.FullName"></label>
+        <input asp-for="AddUser.FullName" class="form-control" />
+        <span class="text-danger" asp-validation-for="AddUser.FullName"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="AddUser.Avatar"></label>
+        <input asp-for="AddUser.Avatar" class="form-control" />
+        <span class="text-danger" asp-validation-for="AddUser.Avatar"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="AddUser.IdCartPicture"></label>
+        <input asp-for="AddUser.IdCartPicture" class="form-control" />
+        <span class="text-danger" asp-validation-for="AddUser.IdCartPicture"></span>
+    </div>
+    <button class="btn btn-primary">Send</button>
+</form>
+
+@section Scripts
+{
+<partial name="Shared/_ValidationScriptsPartial" />
+}
